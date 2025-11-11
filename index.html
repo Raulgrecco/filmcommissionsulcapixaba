@@ -1,249 +1,269 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Film Commission Sul Capixaba</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f7fb;
-            color: #333;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Film Commission Sul Capixaba</title>
 
-        header {
-            background: #0a2a43;
-            color: white;
-            padding: 16px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #f4f6f8;
+        color: #1a1a1a;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 22px;
-            font-weight: bold;
-        }
+    /* NAV */
+    nav {
+        background: #002b5b;
+        padding: 12px 25px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 18px;
+        font-size: 14px;
+    }
 
-        nav a {
-            margin-left: 22px;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 15px;
-        }
+    /* HERO */
+    .hero {
+        width: 100%;
+        height: 320px;
+        background: url('falesias1.png') no-repeat center/cover;
+        display: flex;
+        align-items: flex-end;
+        padding: 35px;
+        color: white;
+        background-attachment: fixed;
+    }
+    .hero-box {
+        background: rgba(0,0,0,0.55);
+        padding: 25px 28px;
+        max-width: 600px;
+        border-radius: 6px;
+    }
 
-        /* HERO */
-        .hero {
-            background: url('falesias1.png') no-repeat center/cover;
-            height: 420px;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 0 60px 50px;
-            text-shadow: 0px 2px 10px rgba(0,0,0,0.6);
-        }
+    /* SESSÕES */
+    section {
+        padding: 50px 80px;
+    }
+    h2 {
+        margin-bottom: 10px;
+        font-size: 28px;
+        color: #002b5b;
+    }
+    p.sub {
+        margin-top: 0;
+        margin-bottom: 28px;
+        color: #555;
+        font-size: 15px;
+    }
 
-        .hero h2 {
-            font-size: 42px;
-            margin: 0;
-            max-width: 750px;
-        }
+    /* CARDS */
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
 
-        .hero p {
-            margin-top: 12px;
-            font-size: 20px;
-            max-width: 650px;
-        }
+    .card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
 
-        /* SESSÕES */
-        section {
-            padding: 50px 40px;
-            max-width: 1200px;
-            margin: auto;
-        }
+    .card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+    }
 
-        h2 {
-            color: #0a2a43;
-            margin-bottom: 10px;
-            font-size: 28px;
-        }
+    .card-content {
+        padding: 18px;
+    }
 
-        p {
-            font-size: 17px;
-            line-height: 1.5;
-        }
+    .card-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+        color: #002b5b;
+    }
 
-        /* GRID */
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 24px;
-            margin-top: 25px;
-        }
+    .card-desc {
+        margin-top: 8px;
+        font-size: 14px;
+        color: #444;
+    }
 
-        .card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-            transition: 0.2s;
-        }
+    /* TV Ao vivo */
+    .tv-box {
+        padding: 40px;
+        text-align: center;
+    }
 
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-        }
-
-        .card img {
-            width: 100%;
-            height: 170px;
-            object-fit: cover;
-        }
-
-        .card h3 {
-            margin: 12px;
-            color: #0a2a43;
-            font-size: 20px;
-        }
-
-        .card p {
-            margin: 0 12px 16px;
-            font-size: 15px;
-            color: #555;
-        }
-
-        footer {
-            background: #0a2a43;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 50px;
-        }
-
-    </style>
+    footer {
+        margin-top: 45px;
+        padding: 20px;
+        text-align: center;
+        background: #002b5b;
+        color: white;
+        font-size: 13px;
+    }
+</style>
 </head>
-
 <body>
 
-<header>
-    <h1>Film Commission Sul Capixaba</h1>
-    <nav>
+<!-- NAV -->
+<nav>
+    <div style="color:white; font-weight:bold;">Film Commission Sul Capixaba</div>
+
+    <div>
         <a href="#hoteis">Hotéis</a>
         <a href="#pousadas">Pousadas</a>
         <a href="#restaurantes">Restaurantes</a>
         <a href="#artesaos">Artesãos</a>
-    </nav>
-</header>
+    </div>
+</nav>
 
 <!-- HERO -->
 <div class="hero">
-    <h2>O portal oficial do turismo e da produção audiovisual no Sul do Espírito Santo</h2>
-    <p>Começando por Marataízes: natureza, gastronomia, hospedagem e cultura.</p>
+    <div class="hero-box">
+        <h1 style="margin:0; font-size:22px;">O ponto oficial para conectar turismo, audiovisual e negócios no Sul do Espírito Santo</h1>
+        <p style="margin:10px 0 0 0; font-size:14px;">
+            Começando por Marataízes — oferecendo visibilidade, vitrines e conexão útil com moradores, turistas e produtores.
+        </p>
+    </div>
 </div>
+
 
 <!-- HOTÉIS -->
 <section id="hoteis">
     <h2>Hotéis</h2>
-    <p>Hotéis parceiros da Film Commission preparados para receber turistas e equipes de produção.</p>
+    <p class="sub">Hotéis parceiros da Film Commission. Estrutura, conforto e atendimento para receber turistas e produções.</p>
 
     <div class="grid">
+
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=60">
-            <h3>Hotel Vista Mar</h3>
-            <p>Conforto, vista privilegiada e localização estratégica.</p>
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=60">
+            <div class="card-content">
+                <div class="card-title">Hotel Exemplo 1</div>
+                <div class="card-desc">Conforto, boas suítes e área de lazer.</div>
+            </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=60">
-            <h3>Hotel Praia Sul</h3>
-            <p>Ambiente moderno e atendimento diferenciado.</p>
+            <img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb210b7?auto=format&fit=crop&w=1200&q=60">
+            <div class="card-content">
+                <div class="card-title">Hotel Modelo</div>
+                <div class="card-desc">Excelente localização e privacidade.</div>
+            </div>
         </div>
+
     </div>
 </section>
+
 
 <!-- POUSADAS -->
 <section id="pousadas">
     <h2>Pousadas</h2>
-    <p>Pousadas charmosas e aconchegantes, perfeitas para famílias e casais.</p>
+    <p class="sub">Pousadas charmosas e acolhedoras para quem busca tranquilidade e contato com a natureza.</p>
 
     <div class="grid">
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=60">
-            <h3>Pousada do Sol</h3>
-            <p>Tranquilidade e natureza à beira-mar.</p>
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=60">
+            <div class="card-content">
+                <div class="card-title">Pousada Exemplo</div>
+                <div class="card-desc">Ambiente tranquilo e confortável.</div>
+            </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=60">
-            <h3>Pousada Mar Azul</h3>
-            <p>Ambiente acolhedor e clima familiar.</p>
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=60">
+            <div class="card-content">
+                <div class="card-title">Pousada do Sol</div>
+                <div class="card-desc">Vista para jardins e áreas externas.</div>
+            </div>
         </div>
 
     </div>
 </section>
+
 
 <!-- RESTAURANTES -->
 <section id="restaurantes">
     <h2>Restaurantes</h2>
-    <p>Sabores da culinária capixaba e gastronomia afetiva do litoral sul.</p>
+    <p class="sub">Sabores da culinária capixaba e gastronomia afetiva do litoral sul.</p>
 
     <div class="grid">
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1555992336-cbfca8792696?auto=format&fit=crop&w=1200&q=60">
-            <h3>Restaurante do Peixe</h3>
-            <p>Frutos do mar frescos e tradição local.</p>
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=60">
+            <div class="card-content">
+                <div class="card-title">Restaurante do Peixe</div>
+                <div class="card-desc">Frutos do mar frescos e tradição local.</div>
+            </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=1200&q=60">
-            <h3>Sabores da Barra</h3>
-            <p>Cozinha afetiva com ingredientes regionais.</p>
+            <img src="https://images.unsplash.com/photo-1612197527762-1f12c4cd6e10?auto=format&fit=crop&w=1200&q=60">
+            <div class="card-content">
+                <div class="card-title">Sabores da Barra</div>
+                <div class="card-desc">Cozinha afetiva e ingredientes regionais.</div>
+            </div>
         </div>
 
     </div>
 </section>
+
 
 <!-- ARTESÃOS -->
 <section id="artesaos">
     <h2>Artesãos</h2>
-    <p>Arte local, cultura e identidade capixaba em cada peça produzida.</p>
+    <p class="sub">Arte local, cultura e identidade capixaba em cada peça produzida.</p>
 
     <div class="grid">
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1616627989397-94a2fdbef52d?auto=format&fit=crop&w=1200&q=60">
-            <h3>Artesã Maria</h3>
-            <p>Artesanato tradicional e feito à mão.</p>
+            <img src="https://images.unsplash.com/photo-1581291519195-ef11498d1cf5?auto=format&fit=crop&w=1200&q=60">
+            <div class="card-content">
+                <div class="card-title">Artesã Maria</div>
+                <div class="card-desc">Artesanato tradicional e feito à mão.</div>
+            </div>
         </div>
 
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1616628182501-1e520f5da2b9?auto=format&fit=crop&w=1200&q=60">
-            <h3>Ateliê da Praia</h3>
-            <p>Peças autorais inspiradas no mar.</p>
+            <img src="https://images.unsplash.com/photo-1529101091764-c3526daf38fe?auto=format&fit=crop&w=1200&q=60">
+            <div class="card-content">
+                <div class="card-title">Ateliê da Praia</div>
+                <div class="card-desc">Peças autorais inspiradas no mar.</div>
+            </div>
         </div>
 
     </div>
 </section>
 
-<!-- TV AO VIVO -->
-<section>
-    <h2>TV Marataízes — Ao Vivo</h2>
-    <p>Conteúdo local, eventos, cultura e turismo 24 horas no ar.</p>
 
-    <iframe src="https://player.castr.com/live_809e4d1087af11f092f8f727f1f0bfd4"
-        width="100%" style="aspect-ratio: 16/9; min-height: 390px;"
-        frameborder="0" scrolling="no" allow="autoplay" allowfullscreen>
+<!-- TV AO VIVO -->
+<div class="tv-box">
+    <h2>TV Marataízes • Ao Vivo</h2>
+    <p class="sub">Conteúdo local, cultura, eventos, turismo e a vida do Sul Capixaba transmitida 24h.</p>
+
+    <iframe 
+        src="https://player.castr.com/live_809e4d1087af11f092f8f727f1f0bfd4" 
+        width="100%" 
+        style="aspect-ratio:16/9; max-width:900px; border-radius:8px;" 
+        frameborder="0" 
+        allow="autoplay" 
+        allowfullscreen>
     </iframe>
-</section>
+</div>
+
 
 <footer>
     Film Commission Sul Capixaba • Macuca Media Hub • TV Marataízes © 2025
