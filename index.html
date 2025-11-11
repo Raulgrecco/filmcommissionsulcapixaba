@@ -3,35 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sobre • Film Commission Sul Capixaba</title>
+<title>Film Commission Sul Capixaba</title>
 
 <style>
     body {
         margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: Arial, sans-serif;
         background: #f5f7fa;
-        color: #1a1a1a;
-        line-height: 1.6;
+        color: #222;
     }
 
+    /* HEADER */
     header {
         background: #003366;
+        padding: 10px 20px;
         color: white;
-        padding: 12px 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 9;
     }
 
-    header a {
+    nav a {
         color: white;
-        text-decoration: none;
         margin-left: 15px;
+        text-decoration: none;
         font-size: 14px;
     }
 
+    /* HERO */
     .hero {
-        height: 240px;
+        height: 260px;
         background-image: url("falesias1.png");
         background-size: cover;
         background-position: center;
@@ -42,125 +46,290 @@
         position: absolute;
         bottom: 20px;
         left: 20px;
+        width: 350px;
         background: rgba(0,0,0,0.55);
         padding: 20px;
-        width: 330px;
+        border-radius: 8px;
         color: white;
         font-size: 16px;
-        border-radius: 8px;
     }
 
-    .container {
-        max-width: 880px;
+    /* SECTIONS */
+    .section {
+        max-width: 1000px;
         margin: 40px auto;
         padding: 0 20px;
     }
 
-    h1 {
+    h2 {
         color: #003366;
         margin-bottom: 10px;
     }
 
-    h2 {
-        color: #003366;
-        margin-top: 40px;
+    p { line-height: 1.5; }
+
+    /* CARDS */
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        margin-top: 20px;
     }
 
+    @media(max-width: 760px) {
+        .grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+
+    .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        background: #ddd;
+    }
+
+    .card-content {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0 0 5px 0;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 14px;
+        text-decoration: none;
+        border-radius: 6px;
+        color: white;
+    }
+
+    .btn-blue { background: #003366; }
+    .btn-green { background: #25D366; }
+
+    /* FOOTER */
     footer {
         background: #003366;
         color: white;
-        padding: 10px;
+        padding: 12px;
         text-align: center;
         margin-top: 40px;
         font-size: 12px;
     }
 </style>
-</head>
 
+</head>
 <body>
 
 <header>
-    <div>Film Commission Sul Capixaba</div>
+    <div><strong>Film Commission Sul Capixaba</strong></div>
     <nav>
-        <a href="index.html">Início</a>
-        <a href="hoteis.html">Hotéis</a>
-        <a href="pousadas.html">Pousadas</a>
-        <a href="restaurantes.html">Restaurantes</a>
-        <a href="artesanato.html">Artesãos</a>
-        <a href="sobre.html"><strong>Sobre</strong></a>
+        <a href="#sobre">Sobre</a>
+        <a href="#hoteis">Hotéis</a>
+        <a href="#pousadas">Pousadas</a>
+        <a href="#restaurantes">Restaurantes</a>
+        <a href="#artesaos">Artesãos</a>
     </nav>
 </header>
 
 <div class="hero">
     <div class="hero-text">
-        A porta de entrada para turismo, cultura, audiovisual e experiências no Sul do Espírito Santo.
+        O ponto oficial que conecta turismo, audiovisual e negócios no Sul do Espírito Santo.
+        Começando por Marataízes — diversidade viva, identidade forte e uma rede que une moradores, turistas e produtores.
     </div>
 </div>
 
-<div class="container">
 
-    <h1>Sobre a Film Commission Sul Capixaba</h1>
-
+<!-- ============================
+        SOBRE
+============================ -->
+<div class="section" id="sobre">
+    <h2>Sobre</h2>
     <p>
-        A Film Commission Sul Capixaba é um ponto de encontro entre turismo, cultura, audiovisual
-        e desenvolvimento local. Nasce em Marataízes com um propósito simples e direto:
-        **conectar visitantes, moradores, produtores e empreendedores da região de forma clara,
-        útil e acolhedora.**
+        A Film Commission Sul Capixaba é o primeiro hub integrado de turismo, cultura e audiovisual da região.
+        Aqui, o visitante descobre onde ficar, onde comer, o que visitar e quem produz arte local.
+        Tudo reunido de forma simples, útil e acolhedora.
     </p>
-
     <p>
-        Aqui o turista encontra tudo o que precisa para ter uma experiência completa:
-        onde ficar, onde comer, o que visitar, quem produz arte na cidade e qual é o clima
-        real do lugar. Tudo reunido em um único ambiente digital — com transparência,
-        afetividade e foco em fortalecer o comércio local.
+        A plataforma também impulsiona o comércio local — dando visibilidade a hotéis, pousadas, restaurantes e artesãos,
+        enquanto integra conteúdo da TV Marataízes para mostrar o dia a dia real da região.
     </p>
-
-    <h2>Por que isso existe?</h2>
-
-    <p>
-        Porque a região Sul do Espírito Santo possui uma força gigantesca, mas ainda pouco organizada
-        e pouco explorada. Hotéis familiares, pousadas charmosas, restaurantes incríveis e artesãos
-        talentosos muitas vezes não têm visibilidade. O turista chega, mas não sabe onde está
-        o melhor da cidade.
-    </p>
-
-    <p>
-        A Film Commission vem para resolver isso: **visibilidade, organização e acesso rápido**.
-        Uma vitrine direta, atualizada e pensada para quem chega e para quem vive aqui.
-    </p>
-
-    <h2>O audiovisual como ponte</h2>
-
-    <p>
-        O projeto nasce dentro da <strong>Macuca Media Hub</strong>, produtora independente que criou a
-        <strong>TV Marataízes</strong>. A TV exibe diariamente, de forma livre e independente,
-        a vida da cidade, seus personagens, sua gastronomia, sua história e sua energia.
-    </p>
-
-    <p>
-        Todo esse conteúdo será integrado à Film Commission, reforçando o turismo,
-        contando histórias reais e valorizando cada empreendedor local.
-    </p>
-
-    <h2>Para quem é</h2>
-
-    <p>
-        ✔ Turistas que querem saber onde ir<br>
-        ✔ Famílias que planejam estadia<br>
-        ✔ Produtores audiovisuais que buscam locações<br>
-        ✔ Restaurantes, artesãos e hotéis que desejam visibilidade<br>
-        ✔ Marataízes e toda a região Sul buscando um novo eixo de desenvolvimento<br>
-    </p>
-
-    <h2>Nossa missão</h2>
-
-    <p>
-        **Ser a plataforma oficial de conexão entre quem chega e quem vive aqui.**  
-        Simples, direto e sem burocracia.  
-        Um mapa vivo do Sul do Espírito Santo.
-    </p>
-
 </div>
+
+
+<!-- ============================
+        HOTÉIS
+============================ -->
+<div class="section" id="hoteis">
+    <h2>Hotéis</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501117716987-c8e1ecb210b0?auto=format&fit=crop&w=1600&q=80">
+            <div class="card-content">
+                <div class="card-title">Hotel Exemplo 1</div>
+                Conforto, luz natural e bom atendimento.
+                <div class="buttons">
+                    <a class="btn btn-blue" href="#">Ver Fotos</a>
+                    <a class="btn btn-green" href="https://wa.me/5528999036141">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80">
+            <div class="card-content">
+                <div class="card-title">Hotel Modelo</div>
+                Modernidade, privacidade e excelente localização.
+                <div class="buttons">
+                    <a class="btn btn-blue" href="#">Ver Fotos</a>
+                    <a class="btn btn-green" href="https://wa.me/5528999036141">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- ============================
+        POUSADAS
+============================ -->
+<div class="section" id="pousadas">
+    <h2>Pousadas</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80">
+            <div class="card-content">
+                <div class="card-title">Pousada Exemplo</div>
+                Ambiente simples, acolhedor e confortável.
+                <div class="buttons">
+                    <a class="btn btn-blue" href="#">Ver Fotos</a>
+                    <a class="btn btn-green" href="https://wa.me/5528999036141">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1600607687929-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80">
+            <div class="card-content">
+                <div class="card-title">Pousada do Sol</div>
+                Vista para jardins e áreas externas.
+                <div class="buttons">
+                    <a class="btn btn-blue" href="#">Ver Fotos</a>
+                    <a class="btn btn-green" href="https://wa.me/5528999036141">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- ============================
+        RESTAURANTES
+============================ -->
+<div class="section" id="restaurantes">
+    <h2>Restaurantes</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=1600&q=80">
+            <div class="card-content">
+                <div class="card-title">Restaurante do Peixe</div>
+                Frutos do mar frescos e tradição local.
+                <div class="buttons">
+                    <a class="btn btn-blue" href="#">Ver Cardápio</a>
+                    <a class="btn btn-green" href="https://wa.me/5528999036141">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=1600&q=80">
+            <div class="card-content">
+                <div class="card-title">Sabores da Barra</div>
+                Gastronomia afetiva com ingredientes regionais.
+                <div class="buttons">
+                    <a class="btn btn-blue" href="#">Ver Cardápio</a>
+                    <a class="btn btn-green" href="https://wa.me/5528999036141">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- ============================
+        ARTESÃOS
+============================ -->
+<div class="section" id="artesaos">
+    <h2>Artesãos</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1600&q=80">
+            <div class="card-content">
+                <div class="card-title">Artesã Maria</div>
+                Artesanato tradicional capixaba.
+                <div class="buttons">
+                    <a class="btn btn-blue" href="#">Ver Trabalhos</a>
+                    <a class="btn btn-green" href="https://wa.me/5528999036141">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1523978591478-c753949ff840?auto=format&fit=crop&w=1600&q=80">
+            <div class="card-content">
+                <div class="card-title">Ateliê da Praia</div>
+                Peças autorais inspiradas no mar.
+                <div class="buttons">
+                    <a class="btn btn-blue" href="#">Ver Trabalhos</a>
+                    <a class="btn btn-green" href="https://wa.me/5528999036141">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- ============================
+        TV MARATAÍZES • AO VIVO
+============================ -->
+<div class="section">
+    <h2>TV Marataízes • Ao Vivo</h2>
+
+    <div style="max-width: 900px; margin: 0 auto;">
+        <iframe src="https://player.castr.com/live_809e4d1087af11f092f8f727f1f0bfd4"
+                width="100%" style="aspect-ratio: 16/9; min-height: 340px;"
+                frameborder="0" allow="autoplay" allowfullscreen></iframe>
+    </div>
+</div>
+
 
 <footer>
     Film Commission Sul Capixaba • Macuca Media Hub • © 2025
