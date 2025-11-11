@@ -1,146 +1,211 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Film Commission Sul Capixaba</title>
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Film Commission Sul Capixaba – Marataízes</title>
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            color: #222;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
         }
 
         header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: #0a0a0a;
+            background: white;
+            border-bottom: 1px solid #e5e5e5;
             padding: 15px 30px;
-            z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         header h1 {
-            color: #fff;
             font-size: 20px;
             margin: 0;
+            font-weight: 600;
+            color: #1c1c1c;
         }
 
         nav a {
-            color: #fff;
             margin-left: 20px;
             text-decoration: none;
-            font-size: 15px;
+            color: #333;
+            font-weight: 500;
         }
-        nav a:hover { text-decoration: underline; }
 
         .hero {
-            margin-top: 70px;
-            background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=60') center/cover no-repeat;
-            height: 380px;
-            display: flex;
-            align-items: center;
-            color: white;
-            padding: 30px;
-            text-shadow: 0 2px 8px rgba(0,0,0,.6);
+            padding: 40px 10%;
+            text-align: center;
         }
-        .hero h2 { font-size: 42px; margin: 0; font-weight: bold; }
-        .hero p { margin-top: 10px; font-size: 20px; max-width: 700px; }
 
-        .section { padding: 50px 30px; }
-        .section h3 { margin-top: 0; font-size: 26px; color: #111; }
+        .hero h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
 
-        .grid {
+        .hero p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        iframe {
+            border-radius: 12px;
+            margin-top: 20px;
+            max-width: 100%;
+        }
+
+        .section {
+            padding: 50px 10%;
+        }
+
+        .section h3 {
+            font-size: 26px;
+            margin-bottom: 15px;
+        }
+
+        .categories {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            margin-top: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
         }
 
         .card {
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: 0.3s;
         }
 
-        .player {
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .card img {
             width: 100%;
-            margin-top: 20px;
-            margin-bottom: 40px;
+            border-radius: 10px;
+            margin-bottom: 15px;
         }
-
-        iframe { width: 100%; border-radius: 10px; }
 
         footer {
-            background: #111;
+            background: #1c1c1c;
+            color: white;
+            padding: 40px 10%;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin: 5px 0;
             color: #ccc;
-            padding: 20px;
-            text-align: center;
-            margin-top: 40px;
+        }
+
+        footer strong {
+            color: white;
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Film Commission Sul Capixaba</h1>
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="hoteis.html">Hotéis</a>
-        <a href="restaurantes.html">Restaurantes</a>
-        <a href="artesanato.html">Artesanato</a>
-        <a href="contato.html">Contato</a>
-    </nav>
-</header>
+    <!-- HEADER -->
+    <header>
+        <h1>Film Commission Sul Capixaba</h1>
+        <nav>
+            <a href="hoteis.html">Hotéis</a>
+            <a href="pousadas.html">Pousadas</a>
+            <a href="restaurantes.html">Restaurantes</a>
+            <a href="artesanato.html">Artesãos</a>
+            <a href="sobre.html">Sobre</a>
+        </nav>
+    </header>
 
-<section class="hero">
-    <div>
-        <h2>Iniciando por Marataízes</h2>
-        <p>Conectando empreendedores locais ao audiovisual e ao turismo criativo.</p>
-    </div>
-</section>
+    <!-- HERO + TV -->
+    <section class="hero">
+        <h2>Bem-vindo ao Portal Oficial de Turismo e Audiovisual</h2>
+        <p>Começando por Marataízes – conectando hotéis, pousadas, restaurantes e artesãos da região sul capixaba.</p>
 
-<section class="section">
-    <h3>TV Marataízes — Transmissão ao vivo</h3>
-
-    <div class="player">
+        <!-- TV MARATAÍZES AO VIVO -->
         <iframe src="https://player.castr.com/live_809e4d1087af11f092f8f727f1f0bfd4"
-        style="aspect-ratio: 16/9; min-height: 340px;"
-        frameborder="0"
-        allow="autoplay"
-        allowfullscreen></iframe>
-    </div>
-</section>
+            width="100%"
+            style="aspect-ratio: 16/9; min-height: 320px;"
+            frameborder="0"
+            scrolling="no"
+            allow="autoplay"
+            allowfullscreen
+            webkitallowfullscreen
+            mozallowfullscreen
+            oallowfullscreen
+            msallowfullscreen>
+        </iframe>
+    </section>
 
-<section class="section">
-    <h3>Parceiros em Destaque</h3>
+    <!-- SEÇÃO INTRO -->
+    <section class="section">
+        <h3>O ponto de partida: Marataízes</h3>
+        <p>
+            A Film Commission Sul Capixaba nasce com o objetivo de fortalecer o turismo,
+            apoiar pequenos empreendedores e conectar produção audiovisual com os potenciais da região.
+        </p>
 
-    <div class="grid">
-        <div class="card">
-            <h4>Hotéis e Pousadas</h4>
-            <p>Hospedagem para equipes, artistas e visitantes.</p>
-        </div>
-        <div class="card">
-            <h4>Restaurantes</h4>
-            <p>Culinária local, estrutura e serviços para produções.</p>
-        </div>
-        <div class="card">
-            <h4>Artesanato</h4>
-            <p>Arte local, memória e identidade capixaba.</p>
-        </div>
-    </div>
-</section>
+        <p>
+            Este portal serve como referência para turistas, visitantes, produtoras,
+            criadores de conteúdo e todos que desejam conhecer a riqueza cultural, gastronômica,
+            artesanal e hoteleira da nossa terra.
+        </p>
+    </section>
 
-<footer>
-    Film Commission Sul Capixaba — Macuca Media Hub © 2025
-</footer>
+    <!-- CATEGORIAS -->
+    <section class="section">
+        <h3>Explore a região</h3>
+
+        <div class="categories">
+
+            <!-- HOTÉIS -->
+            <a class="card" href="hoteis.html">
+                <img src="https://picsum.photos/400/250?random=1" alt="">
+                <h4>Hotéis</h4>
+                <p>Onde ficar – conforto, vista e localização.</p>
+            </a>
+
+            <!-- POUSADAS -->
+            <a class="card" href="pousadas.html">
+                <img src="https://picsum.photos/400/250?random=2" alt="">
+                <h4>Pousadas</h4>
+                <p>Hospedagens aconchegantes e familiares.</p>
+            </a>
+
+            <!-- RESTAURANTES -->
+            <a class="card" href="restaurantes.html">
+                <img src="https://picsum.photos/400/250?random=3" alt="">
+                <h4>Restaurantes</h4>
+                <p>Sabores da terra, gastronomia e tradição.</p>
+            </a>
+
+            <!-- ARTESANATO -->
+            <a class="card" href="artesanato.html">
+                <img src="https://picsum.photos/400/250?random=4" alt="">
+                <h4>Artesãos</h4>
+                <p>O talento da nossa gente em cada peça.</p>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p><strong>Film Commission Sul Capixaba</strong></p>
+        <p>Produzido por Macuca Media Hub – Marataízes, ES</p>
+        <p>Instagram: @tvmarataizes</p>
+        <p>Contato: (28) 99903-6141</p>
+    </footer>
 
 </body>
 </html>
